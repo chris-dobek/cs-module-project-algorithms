@@ -3,9 +3,17 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    
+    products = []
 
-    pass
+    for i in arr:
+        arr.pop(i)
+        product = 1
+        for number in arr:
+            product *= number
+        products.append(product)
+    
+    return products
 
 
 if __name__ == '__main__':
