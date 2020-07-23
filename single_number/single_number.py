@@ -4,6 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
 
+    s = set()
+
+    for x in arr:
+
+        if x in s:
+            s.remove(x)
+        else:
+            s.add(x)
+
+    return list(s)[0]
+'''
+Old Code Below
     number_array1 = []
     number_array2 = []
 
@@ -18,7 +30,7 @@ def single_number(arr):
             return number
     
     return -1
-
+'''
 
 
 
